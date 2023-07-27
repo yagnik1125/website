@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border-radius: 3px;
+            border: none;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            border-radius: 3px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+
+        #for_nav {
+            background-color: rgb(23, 156, 179);
+        }
+
+        .d-block_w-100 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 570px;
+        }
+
+
+        /* above from style sheet */
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        html,
+        body {
+            height: 100%;
+            font-weight: 800;
+        }
+
+        body {
+            background: yellow;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        svg {
+            display: block;
+            font: 10.5em 'Montserrat';
+            width: 960px;
+            height: 300px;
+            margin: 0 auto;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+
+
+        .text-copy:nth-child(1) {
+            stroke: #4D163D;
+            animation-delay: -1s;
+        }
+
+        .text-copy:nth-child(2) {
+            stroke: #840037;
+            animation-delay: -2s;
+        }
+
+        .text-copy:nth-child(3) {
+            stroke: #BD0034;
+            animation-delay: -3s;
+        }
+
+        .text-copy:nth-child(4) {
+            stroke: #BD0034;
+            animation-delay: -4s;
+        }
+
+        .text-copy:nth-child(5) {
+            stroke: #FDB731;
+            animation-delay: -5s;
+        }
+
+        .text-copy:hover {
+            animation-duration: 0.1ms;
+        }
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
+
+
+
+        @import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Asap", sans-serif;
+            background-color: #fdfdfe;
+        }
+
+        header {
+            /* width: 100%; */
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        header h1 {
+            position: absolute;
+            width: 90%;
+            font-size: 60px;
+            font-weight: 600;
+            color: transparent;
+            background-image: linear-gradient(to right, #553c9a, #ee4b2b, #00c2cb, #ff7f50, #553c9a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: 200%;
+            background-position: -200%;
+            animation: animated-gradient 2s infinite alternate-reverse;
+        }
+
+        @keyframes animated-gradient {
+            to {
+                background-position: 200%;
+            }
+        }
+
+
+
+
+
+        a:link {
+            color: rgb(132, 57, 4);
+        }
+
+        a.highlight:hover {
+            color: rgb(6, 8, 6);
+
+            font-size: 32px;
+
+        }
+
+        a:hover {
+            color: rgb(2, 5, 2);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a:visited {
+            color: #fb0202;
+        }
+
+        a:active {
+            color: #adb830;
+        }
+
+        body {
+            background-image: url("Screenshot278.png");
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .hero-image {
+            height: 600px;
+            background-attachment: fixed;
+            object-fit: cover;
+            /* background-position: 450px X 450px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .para1 {
+            background-image: url("dglogo.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        p2 {
+            color: rgb(153, 28, 8);
+            margin-left: 25px;
+            font-size: x-large;
+            font-family: sans-serif;
+        }
+
+        .xyz {
+            background: linear-gradient(90deg, rgb(227, 199, 107, 0.7) 0%, rgb(121, 227, 107, 0.7) 45%, rgb(112, 194, 241, 0.7) 100%);
+            opacity: 0.9;
+            width: auto;
+            font-size: x-large;
+            color: rgb(138, 2, 25);
+
+        }
+
+        .abc::first-letter {
+            float: left;
+            line-height: 30px;
+            font-size: 70px;
+            padding-right: 5px;
+            padding-left: 5px;
+            color: rgb(0, 98, 128);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: -5px;
+            margin-right: 5px;
+        }
+
+        p {
+            background: linear-gradient(0deg, rgba(253, 235, 177, 0.7) 0%, rgba(180, 204, 92, 0.7) 45%, rgba(125, 183, 44, 0.7) 100%);
+            opacity: 0.9;
+            font-size: x-large;
+            color: rgb(138, 2, 25);
+        }
+
+        .tab {
+            display: inline-block;
+            margin-left: 25px;
+        }
+
+        .aaa {
+            opacity: 0.7;
+            padding: 5px 5px;
+            font-size: larger;
+            border: solid rgb(35, 19, 19);
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            transition: 0.5s;
+            margin-bottom: 15px;
+        }
+
+        a.aaa:hover {
+            padding: 0px 15px;
+            font-size: xx-large;
+            background-color: rgb(203, 170, 137);
+            border-radius: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            box-shadow: 0 0 20px 20px rgba(2, 81, 108, 0.5);
+        }
+
+
+
+        .container {
+            display: flex;
+            width: 100%;
+            padding: 4% 2%;
+            box-sizing: border-box;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .box {
+            flex: 1;
+            overflow: hidden;
+            transition: .5s;
+            margin: 0 2%;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+            line-height: 0;
+        }
+
+        .box>img {
+            width: 200%;
+            height: calc(100% - 10vh);
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .box>span {
+            font-size: 3.8vh;
+            display: block;
+            text-align: center;
+            height: 10vh;
+            line-height: 2.6;
+        }
+
+        .box:hover {
+            flex: 1 1 50%;
+        }
+
+        .box:hover>img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="hero-image" style="text-align: center;color: rgb(7, 5, 5);padding: 25px;">
+
+        <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">A N I M E </text>
+                <text text-anchor="middle" x="50.7%" y="80.7%">A N I M E </text>
+
+            </symbol>
+
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy">A</use>
+                <use xlink:href="#s-text" class="text-copy">N</use>
+                <use xlink:href="#s-text" class="text-copy">I</use>
+                <use xlink:href="#s-text" class="text-copy">M</use>
+                <use xlink:href="#s-text" class="text-copy">E</use>
+            </g>
+        </svg>
+
+
+        <div style="color:black;display: flex;flex-direction: row;justify-content: space-between;">
+                <!-- <span class="tab"></span><span class="tab"></span><span class="tab"></span><span
+                    class="tab"></span><span class="tab"></span><span class="tab"></span><span class="tab"></span><span
+                    class="tab"></span>
+                <a class="aaa" href="dragon_ball.html"><b>Dragon Ball</b></a><span class="tab"></span>
+                <a class="aaa" href="one_peice.html"><b>One Piece</b></a><span class="tab"></span>
+                <a class="aaa" href="naruto.html"><b>Naruto</b></a><span class="tab"></span>
+                <a class="aaa" href="death_note.html"><b>Death Note</b></a><span class="tab"></span>
+                <a class="aaa" href="mangareg.html"><b>Manga</b></a><span class="tab"></span>
+                <a class="aaa" href="z3.html"><b>Review</b></a> -->
+                <a class="aaa" href="dragon_ball.html"><b>Dragon Ball</b></a>
+                <a class="aaa" href="one_peice.html"><b>One Piece</b></a>
+                <a class="aaa" href="naruto.html"><b>Naruto</b></a>
+                <a class="aaa" href="death_note.html"><b>Death Note</b></a>
+                <a class="aaa" href="mangareg.html"><b>Manga</b></a>
+                <a class="aaa" href="z3.html"><b>Review</b></a>
+        </div>
+
+        <!-- <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                <a class="aaa" href="dragon_ball.html"><b>Dragon Ball</b></a>
+                <a class="aaa" href="one_peice.html"><b>One Piece</b></a>
+                <a class="aaa" href="naruto.html"><b>Naruto</b></a>
+                <a class="aaa" href="death_note.html"><b>Death Note</b></a>
+                <a class="aaa" href="mangareg.html"><b>Manga</b></a>
+                <a class="aaa" href="z3.html"><b>Review</b></a>
+        </div> -->
+
+        <br><br>
+        <p class="aaa abc" style="width:auto;height: auto;font-size: x-large;"><b>
+                Anime is hand-drawn and computer-generated animation originating from Japan. Outside of Japan and in
+                English,
+                anime refers specifically to animation produced in Japan.However, in Japan and in Japanese, anime (a
+                term
+                derived from a shortening of the English word animation) describes all animated works, regardless of
+                style or
+                origin. Animation produced outside of Japan with similar style to Japanese animation is commonly
+                referred to as
+                anime-influenced animation.
+            </b></p><br>
+
+
+        <p class="aaa xyz" style="font-size: x-large;width: auto;height: auto;">
+            <b>
+                The earliest commercial Japanese animations date to 1917. A characteristic art style emerged in the
+                1960s with
+                the works of cartoonist Osamu Tezuka and spread in following decades, developing a large domestic
+                audience.
+                Anime is distributed theatrically, through television broadcasts, directly to home media, and over the
+                Internet.
+                In addition to original works, anime are often adaptations of Japanese comics (manga), light novels, or
+                video
+                games. It is classified into numerous genres targeting various broad and niche audiences.
+            </b>
+        </p>
+        <!--  -->
+        <div class="container">
+            <div class="box">
+                <img src="gok2.jpg">
+                <span>Goku</span>
+            </div>
+            <div class="box">
+                <img
+                    src="main-qimg-190bef3af6e815401e25f6a97c33df8b-lq.jpeg">
+                <span>Luffy</span>
+            </div>
+            <div class="box">
+                <img src="Screenshot278.png">
+                <span>Gohan</span>
+            </div>
+            <div class="box">
+                <img src="nanan.jpg">
+                <span>Naruto</span>
+            </div>
+        </div>
+        <!--  -->
+        <footer style="background-color: black;color:white;padding: 18px;">
+            <h3 style="text-align:center;color: white;"><i>&copy;All the right are reserved</i></h3>
+        </footer>
+    </div>
+</body>
+
+</html>
