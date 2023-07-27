@@ -1,0 +1,276 @@
+<html>
+
+<head>
+    <title> Dragon Ball</title>
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover img {
+            opacity: 0.8;
+            transform: scaleX(-1);
+        }
+
+        .aaa {
+            opacity: 0.7;
+            padding: 30px;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: solid rgb(35, 19, 19);
+            background-color: rgb(255, 255, 255);
+            border-radius: 35px;
+            margin-bottom: 15px;
+        }
+
+        /* body {
+            background-image: url("gok2.jpg");
+        } */
+        body {
+            background-image: url("gok2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-attachment: fixed;
+        }
+        
+        .hero-image {
+            height: 600px;
+            background-attachment: fixed;
+            object-fit: cover;
+            /* background-position: 450px X 450px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .tab {
+            display: inline-block;
+            margin-left: 300px;
+        }
+
+        table.hax {
+            display: none;
+        }
+        div.cover:hover table {
+            display: block;
+            padding-left: 300px;
+            transition: 2s;
+        }
+
+
+
+
+        .flip-container {
+            perspective: 1000px;
+            width: 380px;
+            /* Adjust this to match your image size */
+            height: 200px;
+            /* Adjust this to match your image size */
+            padding-left: 20px;
+        }
+
+        .flip-container:hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+        }
+
+        .front {
+            z-index: 2;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: rgb(19, 7, 7);
+            text-align: center;
+            line-height: 30px;
+            font-weight:bolder;
+            /* Adjust this to vertically center the text */
+            font-size: 40px;
+            /* background-color: rgb(255, 255, 255); */
+        }
+
+        .con {
+            display: flex;
+        }
+
+
+        img.ppp{
+            height: 200px;
+            width: 380px;
+            object-fit: cover;
+        }
+    </style>
+
+<body>
+
+    <div style="background-color:rgb(255, 255, 255);color: black;padding-left:400px;">
+        <img src="dglogo.png" alt="dglogo">
+    </div>
+
+    <hr>
+    <!-- <div class="image-container">
+    <img src="C:\Users\Anil\OneDrive\Pictures\Screenshots\index11.jpg" width="388" height="200" alt="Son Goku"
+        style="border:5px solid rgb(250, 123, 123)">
+    </div>
+    <div class="image-container">
+        <img src="C:\Users\Anil\OneDrive\Pictures\Screenshots\8216753-ultraego.jpg" width="375" height="200"
+        alt="Prince Vegeta" style="border:5px solid rgb(136, 123, 236)">
+    </div>
+    <div class="image-container">
+        <img src="C:\Users\Anil\OneDrive\Pictures\Screenshots\gohan-beast-preview-superhero-spoilers-v0-cac7mkk2ny991.jpg"
+        width="388" height="200" alt="Son Gohan" style="border:5px solid rgb(64, 144, 119)">
+    </div> -->
+    <div class="con">
+        <div class="flip-container" style="padding-left: 0%;">
+            <div class="flipper">
+                <div class="front">
+                    <img class="ppp" src="index11.jpg" width="388" height="200"
+                        alt="Son Goku" style="border:5px solid rgb(250, 123, 123)">
+                </div>
+                <div class="back">
+                    <span class="text" style="text-shadow: 10px 10px 10px red;"><br><br><br>Hello i am Son Goku</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <img class="ppp" src="8216753-ultraego.jpg" width="375" height="200"
+                        alt="Prince Vegeta" style="border:5px solid rgb(136, 123, 236)">
+                </div>
+                <div class="back">
+                    <span class="text" style="color:rgb(42, 254, 0);text-shadow: 10px 10px 10px rgb(208, 114, 255);"><br><br><br>Hello i am Prince Vegeta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <img class="ppp" src="gohan-beast-preview-superhero-spoilers-v0-cac7mkk2ny991.jpg"
+                        width="388" height="200" alt="Son Gohan" style="border:5px solid rgb(64, 144, 119)">
+                </div>
+                <div class="back">
+                    <span class="text" style="color:rgb(243, 4, 4);text-shadow: 10px 10px 10px rgb(101, 255, 168);"><br><br><br>Hello i am Son Gohan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <hr>
+
+    <div class="aaa"
+        style="width: auto;opacity: 0.7;font-size: larger;background: linear-gradient(0deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: auto;padding: 10px;border: 5px solid rgb(245, 150, 150)">
+        Dragon Balls is a Japanese media franchise created by Akira Toriyama
+        in 1984. The initial manga, written and illustrated by Toriyama, was serialized in Weekly Shōnen Jump from 1984
+        to 1995, with the 519 individual chapters collected into 42 tankōbon volumes by its publisher Shueisha. Dragon
+        Ball was originally inspired by the classical 16th-century Chinese novel Journey to the West, combined with
+        elements of Hong Kong martial arts films. The series follows the adventures of protagonist Son Goku from his
+        childhood through adulthood as he trains in martial arts. He spends his childhood far from civilization until he
+        meets a teen girl named Bulma, who encourages him to join her quest in exploring the world in search of the
+        seven orbs known as the Dragon Balls, which summon a wish-granting dragon when gathered. Along his journey, Goku
+        makes several other friends, becomes a family man, discovers his alien heritage, and battles a wide variety of
+        villains, many of whom also seek the Dragon Balls.
+    </div>
+    <br>
+    <div class="cover"><b>Here is the list of all the season of Dragon ball</b>
+        <table class="hax" border="3" style="margin:auto">
+            <tr
+                style="background-color: rgb(230, 179, 219);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td><b>Seasons </b></td>
+                <td><b> &nbsp;&nbsp; Aired during</b></td>
+                <td><b> &nbsp;&nbsp; Total Episodes</b></td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td> Dragon Ball </td>
+                <td> &nbsp;&nbsp; (1986-1989)</td>
+                <td> &nbsp;&nbsp; 153</td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td> Dragon Ball Z</td>
+                <td> &nbsp;&nbsp; (1989-1996)</td>
+                <td> &nbsp;&nbsp; 291</td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td> Dragon Ball GT</td>
+                <td> &nbsp;&nbsp; (1996-1997)</td>
+                <td> &nbsp;&nbsp; 64</td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td> Dragon Ball Z Kai</td>
+                <td> &nbsp;&nbsp; (2009-2011,2014-2015)</td>
+                <td> &nbsp;&nbsp; 167</td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150)">
+                <td> Dragon Ball Super</td>
+                <td> &nbsp;&nbsp; (2015-2018)</td>
+                <td> &nbsp;&nbsp; 131</td>
+            </tr>
+            <tr
+                style="background: linear-gradient(90deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: 10px;padding: 15px;border: 5px solid rgb(245, 150, 150);">
+                <td class="hax">Super Dragon Ball Heroes</td>
+                <td class="hax"> &nbsp;&nbsp; (2018-present)</td>
+                <td class="hax"> &nbsp;&nbsp; 46</td>
+
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div class="aaa"
+        style="opacity: 0.7;font-size: larger;background: linear-gradient(0deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);height: auto;width: auto;padding: 10px;border: 5px solid rgb(245, 150, 150)">
+        Toriyama's manga was adapted and divided into two anime series produced by Toei Animation: Dragon Ball and
+        Dragon Ball Z, which together were broadcast in Japan from 1986 to 1996. Additionally, the studio has developed
+        21 animated feature films and three television specials, as well as two anime sequel series titled Dragon Ball
+        GT (1996-1997) and Dragon Ball Super (2015-2018). From 2009 to 2015, a revised version of Dragon Ball Z aired in
+        Japan under the title Dragon Ball Kai, as a recut that follows the manga's story more faithfully by removing
+        most of the material featured exclusively in the anime. Several companies have developed various types of
+        merchandising based on the series leading to a large media franchise that includes films, both animated and
+        live-action, collectible trading card games, numerous action figures, along with several collections of
+        soundtracks and numerous video games. Dragon Ball has become one of the highest-grossing media franchises of all
+        time.
+    </div>
+    <hr>
+    <div style="background-color: black;color:white;padding: 18px;">
+        <h3 style="text-align:center;color: white;"><i>&copy;All the right are reserved</i></h3>
+    </div>
+</body>
+</head>
+
+</html>

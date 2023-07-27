@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <title>Anime Review Form z3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #151719;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .waviy {
+            position: relative;
+            -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+            font-size: 60px;
+        }
+
+        .waviy span {
+            font-family: 'Comic Sans', cursive;
+            position: relative;
+            display: inline-block;
+            color: #a43232;
+            text-transform: uppercase;
+            animation: waviy 1s infinite;
+            animation-delay: calc(.1s * var(--i));
+
+        }
+
+        @keyframes waviy {
+
+            0%,
+            40%,
+            100% {
+                /* transform: rotate(-90deg); */
+                transform: translateY(0);
+            }
+            
+            20% {
+                transform: translateY(-20px);
+                /* transform: rotate(90deg); */
+            }
+        }
+
+
+        body {
+            background-image: url("gohan-beast-preview-superhero-spoilers-v0-cac7mkk2ny991.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-position: ; */
+        }
+
+        form {
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            opacity: 0.8;
+        }
+        
+        input.aaa,
+        textarea {
+            padding: 10px;
+            background-color: rgb(207, 206, 206);
+            border-radius: 15px;
+            width: 50%;
+            margin-bottom: 15px;
+        }
+        input:focus,textarea:focus{
+            background-color:rgb(255, 255, 255);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            border: solid rgb(35, 19, 19);
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["name"].value;
+            var rate = document.forms["registrationForm"]["rate"].value;
+
+            var email = document.forms["registrationForm"]["email"].value;
+            var nameRegex = /^[A-Za-z]+$/;
+            var rateregex = /^[0-9]{1,2}$/
+            var emailRegex = /^[a-z0-9]+@gmail.com$/;
+
+            if (name == "") {
+                alert("Name cannot be empty.");
+                return false;
+            }
+
+            if (!name.match(nameRegex)) {
+                alert("Name should contain letters only.");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email should not be empty.");
+                return false;
+            }
+
+            if (!email.match(emailRegex)) {
+                alert("Invalid email");
+                return false;
+            }
+
+            if (!document.getElementById("yes").checked && !document.getElementById("no").checked) {
+                alert("Please select the option YES or NO.");
+                return false;
+            }
+
+            if (!document.getElementById("1").checked && !document.getElementById("2").checked && !document.getElementById("3").checked && !document.getElementById("4").checked && !document.getElementById("5").checked && !document.getElementById("6").checked) {
+                alert("Please select the technique.");
+                return false;
+            }
+
+            if (rate == "") {
+                alert("Please rate Goku.");
+                return false;
+            }
+
+            if (!rate.match(rateregex)) {
+                alert("Invalid rate.");
+                return false;
+            }
+
+            document.write("Thank you for your response.")
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="registrationForm" onsubmit="return validateForm()"><br>
+        <center>
+            <!-- <h1 style="text-align: center;color:rgb(230, 55, 55)"><big><i>Dargon-Ball Anime Review Form</i></big></h1> -->
+            <div class="waviy">
+                <span style="--i:1">D</span>
+                <span style="--i:2">r</span>
+                <span style="--i:3">a</span>
+                <span style="--i:4">g</span>
+                <span style="--i:5">o</span>
+                <span style="--i:6">n</span>
+                <span style="--i:7">b</span>
+                <span style="--i:8">a</span>
+                <span style="--i:9">l</span>
+                <span style="--i:10">l</span>
+            </div>
+
+            <label style="font-size:larger;"><b>Your full name:-</label> <input type="text" class="aaa" name="name"
+                placeholder="Your full name"><br><br>
+
+            <label style="font-size:larger;">E-mail:-</label> <input type="text" class="aaa" name="email"
+                placeholder="abc@gmail.com"><br><br>
+
+            <label style="font-size:larger;">Do you like to watch Dragon-Ball:-</label><br>
+            <input style="font-size:larger;cursor: pointer;" name="Answer" value="YES" id="yes"
+                type="radio"><label>YES</label><br>
+            <input style="font-size:larger;cursor: pointer;" name="Answer" value="NO" id="no"
+                type="radio"><label>NO</label><br><br>
+
+            <label style="font-size:larger;">Which language you prefer for the best experience:-</label>
+            <select style="cursor: pointer;" name="language">
+                <option style="font-size:larger;">English</option>
+                <option style="font-size:larger;">Japanese with subtitle</option>
+                <option style="font-size:larger;">Hindi</option>
+                <option style="font-size:larger;">Other</option>
+            </select><br><br><br>
+
+
+            <label style="font-size:larger;">Who is your favorite Character in Dragon-Ball:-</label> <input class="aaa"
+                name="character" placeholder="Optional"><br><br>
+
+            <label style="font-size:larger;">Which season of Dragon-Ball you enjoyed the most:-</label>
+            <select style="cursor: pointer;" class="aaa" name="season">
+                <option style="font-size:larger;">Dragon-Ball </option>
+                <option style="font-size:larger;">Dragon-Ball z</option>
+                <option style="font-size:larger;">Dragon-Ball GT</option>
+                <option style="font-size:larger;">Dragon-Ball Super</option>
+            </select><br><br><br>
+
+            <label style="font-size:larger;">How much you would rate Goku out of 10:-</label> <input class="aaa"
+                name="rate" placeholder="Rate here"><br><br>
+
+            <label style="font-size:larger;">Which is the most exciting arc in Dragon-Ball:-</label> <input class="aaa"
+                name="arc" placeholder="Optional"><br><br>
+
+
+            <label style="font-size:larger;">Which is the most Unique technique in Dragon-Ball:-</label><br>
+            <input style="cursor: pointer;" name="technique" value="Kamehameha" id="1" type="radio"><label
+                style="font-size:larger;">Kamehameha</label>
+            <input style="cursor: pointer;" name="technique" value="Gallic gun" id="2" type="radio"><label
+                style="font-size:larger;">Gallic gun</label>
+            <input style="cursor: pointer;" name="technique" value="Special beam cannon" id="3" type="radio"><label
+                style="font-size:larger;">Special beam cannon</label>
+            <input style="cursor: pointer;" name="technique" value="Instant transmission" id="4" type="radio"><label
+                style="font-size:larger;">Instant transmission</label>
+            <input style="cursor: pointer;" name="technique" value="Fusion" id="5" type="radio"><label
+                style="font-size:larger;">Fusion</label>
+            <input style="cursor: pointer;" name="technique" value="Spirit Fission" id="6" type="radio"><label
+                style="font-size:larger;">Spirit Fission</label><br><br>
+
+            <label style="font-size:larger;">Which form of Dragon-Ball character is epic:-</label>
+            <select name="season" style="cursor: pointer;">
+                <option>Autonomus Ultra Instinct </option>
+                <option>Ultra Ego </option>
+                <option>Super saiyan 1 </option>
+                <option>Super saiyan 2 </option>
+                <option>Super saiyan 3 </option>
+                <option>Super saiyan 4 </option>
+                <option>Super saiyan God </option>
+                <option>Super saiyan Blue </option>
+                <option>Super saiyan Blue evolution</option>
+            </select><br><br>
+
+            <label style="font-size:larger;">Give us some of your feedback:-</label><br>
+            <textarea rows="5" cols="40" name="feedback" placeholder="feedback * optional"></textarea><br><br>
+
+            <input class="aaa" name="Submit" value="Submit" type="submit"
+                style="background-color: chocolate;width: 100px;cursor: pointer;">
+            <input class="aaa" name="Reset" value="Reset" type="reset"
+                style="background-color: chocolate;width: 100px;cursor: pointer;">
+        </center>
+        <br><br><br><br><br><br><br><br>
+    </form>
+</body>
+
+</html>

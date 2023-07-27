@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <title> One Piece</title>
+    <style>
+        /* body {
+            background-image: url("opbg1.jpg") ;
+        } */
+        body {
+            background-image: url("opbg1.jpg");
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .hero-image {
+            height: 600px;
+            background-attachment: fixed;
+            object-fit: cover;
+            /* background-position: 450px X 450px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .tab {
+            display: inline-block;
+            margin-left: 250px;
+        }
+
+        a:link {
+            color: #FF0000;
+        }
+
+        a.highlight:hover {
+            color: rgb(245, 247, 245);
+            background-color: rgb(52, 51, 50);
+            font-size: 32px;
+            width: 100px;
+        }
+
+        a:hover {
+            color: rgb(245, 247, 245);
+            background-color: rgb(52, 51, 50);
+            width: 100px;
+        }
+
+        a:visited {
+            color: #ff0000;
+        }
+
+        a:active {
+            color: #3030b8;
+        }
+
+        p {
+            position: relative;
+            animation-name: ex;
+            animation-duration: 4s;
+            /* animation-iteration-count: ; */
+        }
+
+        /* @keyframes ex {
+            0% {
+                left: 500px;
+                top: 500px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        } */
+        .aaa{
+            opacity: 0.7;
+            padding: 30px;
+            font-size: larger;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: solid rgb(35, 19, 19);
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+
+        img.tra {
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            padding: 5px;
+        }
+
+        img.traf {
+            position: relative;
+            animation-name: example1;
+            animation-duration: 4s;
+            padding: 5px;
+        }
+
+        #img1 {
+            animation-timing-function: ease-out;
+        }
+
+        #img2 {
+            animation-timing-function: linear;
+        }
+
+        #img3 {
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes example {
+            0% {
+                left: 500px;
+                top: 500px;
+            }
+
+            50% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+        @keyframes example1 {
+            0% {
+                left: 500px;
+                top: 0px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        img.hat:hover {
+            height: 250px;
+            width: 400px;
+            opacity: 0.7;
+            transition: width 2s, height 4s;
+            box-shadow: 10px 10px 20px 20px rgba(2, 81, 108, 0.5);
+        }
+
+        /* img.shaping {
+            position: relative;
+            animation-name: exa;
+            animation-duration: 4s;
+            padding: 5px;
+            animation-iteration-count: infinite;
+        } */
+
+        #img1 {
+            animation-timing-function: ease-out;
+        }
+
+        #img2 {
+            animation-timing-function: linear;
+        }
+
+        #img3 {
+            animation-timing-function: ease-out;
+        }
+
+        #img4 {
+            animation-duration: 0s;
+        }
+
+        @keyframes exa {
+            0% {
+                border-radius: 0;
+            }
+
+            50% {
+                border-radius: 50%;
+            }
+
+            100% {
+                border-radius: 0;
+            }
+        }
+
+
+        .grb {
+            transition: 4s;
+        }
+
+        .grb:hover {
+            border-radius: 50%;
+        }
+
+        ::selection {
+            font-size: x-large;
+            color: rgb(78, 110, 216);
+            background: rgb(64, 243, 219);
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 1px 20px 30px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        /* div {
+          width: 1150px;
+          height: 100px;
+          padding: 10px;
+          background-color: coral;
+          box-shadow: 10px 10px 5px 12px lightblue;
+        } */
+
+        /* img.circle {
+            border-radius: 50%;
+        } */
+
+        img.border_radius {
+            border-radius: 20px;
+        }
+
+        .container {
+            position: relative;
+            width: 350px;
+        }
+
+        .image {
+            display: block;
+            width: 350px;
+            height: 400px;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 350px;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay {
+            bottom: 0;
+            height: 400px;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        img.hax {
+            display: none;
+            padding: 20px;
+            transition: 4s;
+        }
+
+        div.cover:hover img {
+            display: block;
+            transition: 4s;
+        }
+
+        .gcc {
+            height: 200px;
+            width: 450px;
+        }
+    </style>
+
+<body style="background-color: rgb(252, 247, 240);">
+    <div style="background-color: rgba(0,139,255,255);opacity: 1;box-shadow: 10px 10px 5px 12px rgb(214, 159, 75);">
+    <center>
+        <img class="gcc" id="img4" src="oplo.jpg" alt="" height="200px"
+            width="450px" style="opacity: 1;">
+    </center>
+    </div>
+    <!-- <font size="5">
+        <div style="padding:1px;">
+            <h1 style="text-align:center;"><u><b>One Piece </b></u></h1>
+        </div>
+    </font> -->
+    <img class="shaping hat tra" id="img1"
+        src="main-qimg-190bef3af6e815401e25f6a97c33df8b-lq.jpeg" width="350"
+        height="200" alt="Monkey D> Luffy">
+    <img class="grb hat tra" id="img2" src="How-Old-Is-Zoro-From-One-Piece.jpg"
+        width="350" height="200" alt="Roronoa Zoro">
+    <img class="circle hat tra" id="img3" src="sanjii.jpg" width="350"
+        height="200" alt="Sanji"><br>
+    <font size="5">
+        <b style="color: #FF0000;">
+            <p3 class="highlight" >Monkey D. Luffy<span class="tab"></span>Roronoa Zoro<span class="tab"></span>Sanji</p3>
+        </b>
+    </font>
+    <hr>
+
+    <!-- <div class="container">
+        <img src="C:\Users\Anil\OneDrive\Pictures\Screenshots\nami.jpg" height="200px" width="350px" alt="Avatar"
+            class="image">
+        <div class="overlay">
+            <div class="text">My name is Nami-swan</div>
+        </div>
+    </div> -->
+    <div class="cover" style="width: auto;"><b style="color: aliceblue;font-size: larger;">Hover over this to see the full member crew of the next pirate king</b>
+        <table>
+            <td>
+                <img class="hax traf" src="robin.jpg" alt="">
+            </td>
+            <td>
+                <img class="hax traf" src="ussp.jpg" alt="">
+            </td>
+            <td>
+                <img class="hax traf" src="chpr.jpg" height="300px" width="165px"
+                    alt="">
+            </td>
+            <td>
+                <img class="hax traf" src="nami.jpg" height="300px" width="165px"
+                    alt="">
+            </td>
+            <td>
+                <img class="hax traf" src="brk.jpg" height="300px" width="165px"
+                    alt="">
+            </td>
+        </table>
+    </div>
+    <b>
+    <p class="aaa" style="opacity: 0.6;font-size: 24px;height: auto;width: auto;background: linear-gradient(0deg, rgb(225, 216, 187) 0%,rgb(178, 235, 171) 45%, rgb(151, 204, 235) 100%);">
+        One Piece (stylized in all caps) is a Japanese manga series written and illustrated by Eiichiro Oda. It has been
+        serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since July 1997, with its individual chapters
+        compiled into 104 tankōbon volumes as of November 2022. The story follows the adventures of Monkey D. Luffy, a
+        boy whose body gained the properties of rubber after unintentionally eating a Devil Fruit. With his pirate crew,
+        the Straw Hat Pirates, Luffy explores the Grand Line in search of the deceased King of the Pirates Gol D.
+        Roger's ultimate treasure known as the "One Piece" in order to become the next King of the Pirates.
+    </p>
+    <p class="aaa" style="opacity: 0.6;font-size: 24px;height: auto;width: auto;background: linear-gradient(0deg, rgb(227, 199, 107) 0%,rgb(121, 227, 107) 45%, rgb(112, 194, 241) 100%);">
+        The manga spawned a media franchise, having been adapted into a festival film produced by Production I.G, and an
+        anime series produced by Toei Animation, which began broadcasting in 1999. Additionally, Toei has developed
+        fourteen animated feature films, one original video animation, and thirteen television specials. Several
+        companies have developed various types of merchandising and media, such as a trading card game and numerous
+        video games. The manga series was licensed for an English language release in North America and the United
+        Kingdom by Viz Media and in Australia by Madman Entertainment. The anime series was licensed by 4Kids
+        Entertainment for an English-language release in North America in 2004 before the license was dropped and
+        subsequently acquired by Funimation in 2007.
+    </p>
+</b>
+    <hr>
+    <div style="background-color: black;color:white;padding: 18px;">
+        <h3 style="text-align:center;color: white;"><i>&copy;All the right are reserved</i></h3>
+    </div>
+</body>
+</head>
+
+</html>

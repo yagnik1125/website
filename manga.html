@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping system</title>
+    <style>
+        /* body {
+            background-image: url("mangabg.jpg");
+        } */
+        body {
+            background-image: url("mangabg.jpg");
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .hero-image {
+            height: 600px;
+            background-attachment: fixed;
+            /* background-position: 450px X 450px; */
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #up1 {
+            display: inline;
+            position: relative;
+            padding: 5px;
+        }
+
+        #up3 {
+            display: inline;
+            position: relative;
+            padding: 5px;
+        }
+
+        #up2 {
+            display: inline;
+            position: relative;
+            float: right;
+            padding-top: 3px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blueviolet
+        }
+
+        nav {
+            background-color: antiquewhite;
+        }
+
+        body {
+            background-color: rgb(223, 237, 248);
+        }
+
+        input {
+            background-color: rgb(249, 239, 227);
+            width: 40px;
+        }
+
+        input:hover {
+            background-color: aliceblue;
+        }
+
+        .sub {
+            display: inline-block;
+            display: relative;
+            padding: 10px 30px 10px 30px;
+            text-align: center;
+        }
+
+        img {
+            width: 175px;
+            height: 200px;
+            transition: 1s;
+        }
+        img:hover{
+            width: 350px;
+            height: 400px;
+        }
+
+
+        #this {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        .im {
+            width: 80px
+        }
+
+        @media print {
+            h3 {
+                display: none;
+            }
+
+            .first {
+                display: none;
+            }
+
+            .second {
+                display: none;
+            }
+
+            #third {
+                color: rgb(198, 102, 58);
+            }
+
+            #up3 {
+                display: none;
+            }
+
+            #up2 {
+                display: none;
+            }
+
+            #bill {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="mangareg.html"><img id="this"
+                src="data:image/png;base64,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"></a>
+        <div id="up1">
+            Hello!
+        </div>
+        <!-- <div id="up3">
+            <a href="">Other Stuff</a>
+        </div> -->
+        <span id="detail"></span>
+        <div id="up2">
+            Username: <input type="text" class="im" id="user">
+            Password: <input type="password" class="im" id="pass">
+            <button style="margin-left:5px;" onclick="login()">Login</button>
+        </div>
+    </nav>
+    <div style="color: aliceblue;">
+        <h3>Dragon Ball</h3>
+        <div class="first">
+            <div class="sub">
+                <img
+                    src="dgog.jpeg"><br>
+                Dragon-Ball OG<br>
+                Price: 100rs<br>
+                items = <input type="number" id="fire">
+            </div>
+            <div class="sub">
+                <img
+                    src="dbz.jpeg"><br>
+                Dragon-Ball Z<br>
+                Price: 200rs<br>
+                items = <input type="number" id="rich">
+            </div>
+            <div class="sub">
+                <img src="dbgt.jpeg"><br>
+                Dragon-Ball GT<br>
+                Price: 200rs<br>
+                items = <input type="number" id="think">
+            </div>
+            <div class="sub">
+                <img src="dbs.jpeg"><br>
+                Dragon-Ball Super<br>
+                Price: 200rs<br>
+                items = <input type="number" id="habits">
+            </div>
+        </div>
+        <h3>Other Mangas</h3>
+        <div class="second">
+            <div class="sub">
+                <img
+                    src="op.jpeg"><br>
+                One Piece<br>
+                Price: 80rs<br>
+                items = <input type="number" id="last">
+            </div>
+            <div class="sub">
+                <img src="nr.jpeg"><br>
+                Naruto<br>
+                Price: 90rs<br>
+                items = <input type="number" id="rings">
+            </div>
+            <div class="sub">
+                <img
+                    src="br.jpeg"><br>
+                Boruto<br>
+                Price: 100rs<br>
+                items = <input type="number" id="mocking">
+            </div>
+            <div class="sub">
+                <img
+                    src="dt.jpeg"><br>
+                Death Note<br>
+                Price: 100rs<br>
+                items = <input type="number" id="heaven">
+            </div>
+            
+        </div>
+        <div id="third">
+            <h3>Billing information </h3>
+            <button id="bill" onclick="bill_it();">Bill It</button>
+            <!-- <button id="bill" onclick="bill_it();window.print()">Bill It</button> -->
+            <div id="bill_print"></div>
+        </div>
+    </div>
+    <script>
+        function login() {
+            document.getElementById("detail").innerHTML = document.getElementById("user").value
+        }
+        function bill_it() {
+            val = document.getElementById("fire").value
+            val1 = document.getElementById("rich").value
+            val2 = document.getElementById("think").value
+            val3 = document.getElementById("habits").value
+            val5 = document.getElementById("last").value
+            val6 = document.getElementById("rings").value
+            val7 = document.getElementById("mocking").value
+            val8 = document.getElementById("heaven").value
+            let total = 0
+            console.log(val)
+            document.getElementById("bill_print").innerHTML = "<br>___________________________________________________________________";
+            if (val > 0) { document.getElementById("bill_print").innerHTML += "<br>Dragon-Ball OG : items :" + val + "   value:" + val * 100 + "<br>"; total += val * 100; }
+            if (val1 > 0) { document.getElementById("bill_print").innerHTML += "<br>Dragon-Ball Z : items:" + val1 + "    value:" + val1 * 200 + "<br>"; total += val1 * 200; }
+            if (val2 > 0) { document.getElementById("bill_print").innerHTML += "<br>Dragon-Ball GT : items:" + val2 + "    value: " + val2 * 200 + "<br>"; total += val2 * 200 }
+            if (val3 > 0) { document.getElementById("bill_print").innerHTML += "<br>Dragon-Ball Super : items:" + val3 + "    value:" + val3 * 200 + "<br>"; totoal += val3 * 200; }
+            if (val5 > 0) { document.getElementById("bill_print").innerHTML += "<br>One Piece : items: " + val5 + "   value:" + val5 * 80 + "<br>"; total += val5 * 80; }
+            if (val6 > 0) { document.getElementById("bill_print").innerHTML += "<br>Naruto : items: " + val6 + "   value: " + val6 * 90 + "<br>"; total += val6 * 90 }
+            if (val7 > 0) { document.getElementById("bill_print").innerHTML += "<br>Boruto : items: " + val7 + "    value: " + val7 * 100 + "<br>"; total += val7 * 100 }
+            if (val8 > 0) { document.getElementById("bill_print").innerHTML += "<br>Death Note : items: " + val8 + "    value: " + val8 * 100 + "<br>"; total += val8 * 100 }
+            // document.getElementById("bill_print").innerHTML+="<br><br>Total : "+total;
+            // document.getElementById("bill_print").innerHTML+="<br>___________________________________________________________________";
+            document.getElementById("bill_print").innerHTML += "<br><br>Total : " + total;
+            document.getElementById("bill_print").innerHTML += "<br>___________________________________________________________________";
+        }
+    </script>
+</body>
+
+</html>
